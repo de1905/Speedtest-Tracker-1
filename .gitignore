@@ -17,3 +17,5 @@ _ide_helper.php
 .idea
 .config
 reports/
+app/.DS_Store
+.DS_Store
