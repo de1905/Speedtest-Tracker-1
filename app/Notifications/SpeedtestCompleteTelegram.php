@@ -51,10 +51,7 @@ class SpeedtestCompleteTelegram extends Notification
     public function toTelegram($notifiable)
     {
         $speedtest = $this->speedtest;
-        $msg = "*New Speedtest*
-Ping: *$speedtest->ping*
-Download: *$speedtest->download*
-Upload: *$speedtest->upload*";
+        $msg = "$speedtest->ping* $speedtest->download* $speedtest->upload*";
         return TelegramMessage::create()
                               ->to(SettingsHelper::get('telegram_chat_id')->value)
                               ->content($msg)
